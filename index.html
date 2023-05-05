@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend 3 final module contest April</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2 id="userIP">My Public IP ADDRESS : <span id="ip"></span></h2>
+        <div id="get-data" class="btn">Get Data</div>
+        <div id="main-content">
+            <div class="location-details">
+                <div>
+                    <span id="lat"></span>
+                    <span id="city"></span>
+                    <span id="Organisation"></span>
+                </div>
+                <div>
+                    <span id="Long"></span>
+                    <span id="Region"></span>
+                    <span id="Hostname">Hostname: N/A</span>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div class="time-details">
+                <div><h3>Time Zone : </h3><span id="time-zone"></span></div>
+                <div><h3>Date And Time : </h3><span id="date-time"></span></div>
+                <div><h3>Pincode : </h3><span id="pincode"></span></div>
+                <div><h3>Message : </h3><span id="message"></span></div>
+            </div>
+
+            <div class="post-offices">
+                <div class="filter">
+                    <input type="text" name="filter" id="filter" placeholder="Filter">
+                </div>
+                <div id="post-offices-list" class="post-offices-list">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    </script>
+</body>
+</html>
