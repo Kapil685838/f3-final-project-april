@@ -40,11 +40,11 @@ function fetchData() {
     .then((res) => res.json())
     .then((data) => {
         console.log(data);
-        lat.innerHTML = `Lat : ${data.loc.split(',')[0]}`;
-        long.innerHTML = `Long : ${data.loc.split(',')[1]}`;
-        city.innerHTML = `City : ${data.city}`;
-        organisation.innerHTML = `Organisation : ${data.org}`;
-        region.innerHTML = `Region : ${data.region}`;
+        lat.innerHTML = `<h3>Lat : </h3> ${data.loc.split(',')[0]}`;
+        long.innerHTML = `<h3>Long : </h3> ${data.loc.split(',')[1]}`;
+        city.innerHTML = `<h3>City : </h3> ${data.city}`;
+        organisation.innerHTML = `<h3>Organisation : </h3> ${data.org}`;
+        region.innerHTML = `<h3>Region : </h3> ${data.region}`;
         map.innerHTML = `<iframe src="https://maps.google.com/maps?q=${data.loc.split(',')[0]}, ${data.loc.split(',')[1]}&z=15&output=embed" width="360" height="270" frameborder="0" style="border:0"></iframe>`;
 
         timeZone.innerHTML = data.timezone;
