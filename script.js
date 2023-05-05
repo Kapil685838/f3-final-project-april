@@ -85,7 +85,19 @@ function updatePostOffices(postOffices) {
 
 const filter = document.getElementById('filter');
 filter.addEventListener('input', () => {
-    const filterValue = filter.value;
+    const filterValue = filter.value.toLowerCase();
     const postLists = document.querySelectorAll('.post-office');
+    postLists.forEach((post) => {
+        const name = post.querySelector('.post-office-name').textContent.toLowerCase();
+        const branchType = post.querySelector('.branch-type').textContent.toLowerCase();
+        const deliveryStatus = post.querySelector('.delivery-status').textContent.toLowerCase();
+        const district = post.querySelector('.district').textContent.toLowerCase();
+        const division = post.querySelector('.division').textContent.toLowerCase();
 
-})
+        if (name.includes(filterValue) || branchType.includes(filterValue) || deliveryStatus.includes(filterValue) || district.includes(filterValue) || division.includes(filterValue)) {
+            post.style.display = 'block';
+        } else {
+            post.style.display = 'none';
+        }
+    });
+});
